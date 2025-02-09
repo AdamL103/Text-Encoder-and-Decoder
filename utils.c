@@ -1,3 +1,6 @@
+/*
+ * Authors: Adam Laboissonniere - laboissa@bc.edu, Brian Laboissonniere - laboissb@bc.edu
+*/
 #include "utils.h"
 
 FILE * fopen_checked(const char * filename, const char * mode) {
