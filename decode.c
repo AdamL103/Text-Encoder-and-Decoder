@@ -14,8 +14,8 @@ void decode_chars(unsigned int input, unsigned char * const plain_chars) {
 }
 
 void decode_file(const char * const input_file, const char * const output_file) {
-    FILE * in = fopen(input_file, "rb");
-    FILE * out = fopen(output_file, "w");
+    FILE * in = fopen_checked(input_file, "rb");
+    FILE * out = fopen_checked(output_file, "w");
     unsigned char plain_chars[CHARS_PER_INT] = {0};
     unsigned int encoded;
     while (fread(&encoded, sizeof(unsigned int), 1, in) == 1) {
